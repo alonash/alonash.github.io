@@ -1,77 +1,22 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import path from 'path';
 
-  import { defineConfig } from 'vite';
-  import react from '@vitejs/plugin-react-swc';
-  import path from 'path';
-
-  export default defineConfig({
-    plugins: [react()],
-    resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
-      alias: {
-        'vaul@1.1.2': 'vaul',
-        'sonner@2.0.3': 'sonner',
-        'recharts@2.15.2': 'recharts',
-        'react-resizable-panels@2.1.7': 'react-resizable-panels',
-        'react-hook-form@7.55.0': 'react-hook-form',
-        'react-day-picker@8.10.1': 'react-day-picker',
-        'next-themes@0.4.6': 'next-themes',
-        'lucide-react@0.487.0': 'lucide-react',
-        'input-otp@1.4.2': 'input-otp',
-        'figma:asset/fb516c9d0a01fcd94e88bf7298e6d2efa42e88a6.png': path.resolve(__dirname, './src/assets/fb516c9d0a01fcd94e88bf7298e6d2efa42e88a6.png'),
-        'figma:asset/c3b8589c6f4bbde70c02934dfcab6f7fcaf3c471.png': path.resolve(__dirname, './src/assets/c3b8589c6f4bbde70c02934dfcab6f7fcaf3c471.png'),
-        'figma:asset/c0173ffeb7b4a18af802cfc67077c2f6a3ac0671.png': path.resolve(__dirname, './src/assets/c0173ffeb7b4a18af802cfc67077c2f6a3ac0671.png'),
-        'figma:asset/bfb8eadf5f58b3cffb38d58176504cd3d389b653.png': path.resolve(__dirname, './src/assets/bfb8eadf5f58b3cffb38d58176504cd3d389b653.png'),
-        'figma:asset/a148c8485ee54d3cf02d990d1b403661209ec13d.png': path.resolve(__dirname, './src/assets/a148c8485ee54d3cf02d990d1b403661209ec13d.png'),
-        'figma:asset/9a484320a22ad2ac2dc1c6915614e2898f92e398.png': path.resolve(__dirname, './src/assets/9a484320a22ad2ac2dc1c6915614e2898f92e398.png'),
-        'figma:asset/9422b8624b15a894d7a8eeddb1c837d02253efa7.png': path.resolve(__dirname, './src/assets/9422b8624b15a894d7a8eeddb1c837d02253efa7.png'),
-        'figma:asset/8f1ecc66623e49f04a1d0bbc8b5fff25ce935c51.png': path.resolve(__dirname, './src/assets/8f1ecc66623e49f04a1d0bbc8b5fff25ce935c51.png'),
-        'figma:asset/858e5c28ffd5dc83492ec919bb90e66e1f5033e8.png': path.resolve(__dirname, './src/assets/858e5c28ffd5dc83492ec919bb90e66e1f5033e8.png'),
-        'figma:asset/7b52c50d64efec4c75c3e34f6408021730b20d9a.png': path.resolve(__dirname, './src/assets/7b52c50d64efec4c75c3e34f6408021730b20d9a.png'),
-        'figma:asset/757f9ac189521e26dd145a3d238eef22344a3999.png': path.resolve(__dirname, './src/assets/757f9ac189521e26dd145a3d238eef22344a3999.png'),
-        'figma:asset/5beeda7acb13046be2edae8330d4035bf4fceee2.png': path.resolve(__dirname, './src/assets/5beeda7acb13046be2edae8330d4035bf4fceee2.png'),
-        'figma:asset/5aac047d329d934ea60053f5e8a94747f10d72a8.png': path.resolve(__dirname, './src/assets/5aac047d329d934ea60053f5e8a94747f10d72a8.png'),
-        'figma:asset/2c5dad8c532aa920d2679bfb4c20e7672ee5206f.png': path.resolve(__dirname, './src/assets/2c5dad8c532aa920d2679bfb4c20e7672ee5206f.png'),
-        'figma:asset/24d2aa04639f054b69259972b43b53559d8acebd.png': path.resolve(__dirname, './src/assets/24d2aa04639f054b69259972b43b53559d8acebd.png'),
-        'figma:asset/21207842f4a641540763f521286291e5e9def4b8.png': path.resolve(__dirname, './src/assets/21207842f4a641540763f521286291e5e9def4b8.png'),
-        'figma:asset/1bc49adfec60b220797d1bf7ff0b8f052108b71b.png': path.resolve(__dirname, './src/assets/1bc49adfec60b220797d1bf7ff0b8f052108b71b.png'),
-        'embla-carousel-react@8.6.0': 'embla-carousel-react',
-        'cmdk@1.1.1': 'cmdk',
-        'class-variance-authority@0.7.1': 'class-variance-authority',
-        '@radix-ui/react-tooltip@1.1.8': '@radix-ui/react-tooltip',
-        '@radix-ui/react-toggle@1.1.2': '@radix-ui/react-toggle',
-        '@radix-ui/react-toggle-group@1.1.2': '@radix-ui/react-toggle-group',
-        '@radix-ui/react-tabs@1.1.3': '@radix-ui/react-tabs',
-        '@radix-ui/react-switch@1.1.3': '@radix-ui/react-switch',
-        '@radix-ui/react-slot@1.1.2': '@radix-ui/react-slot',
-        '@radix-ui/react-slider@1.2.3': '@radix-ui/react-slider',
-        '@radix-ui/react-separator@1.1.2': '@radix-ui/react-separator',
-        '@radix-ui/react-select@2.1.6': '@radix-ui/react-select',
-        '@radix-ui/react-scroll-area@1.2.3': '@radix-ui/react-scroll-area',
-        '@radix-ui/react-radio-group@1.2.3': '@radix-ui/react-radio-group',
-        '@radix-ui/react-progress@1.1.2': '@radix-ui/react-progress',
-        '@radix-ui/react-popover@1.1.6': '@radix-ui/react-popover',
-        '@radix-ui/react-navigation-menu@1.2.5': '@radix-ui/react-navigation-menu',
-        '@radix-ui/react-menubar@1.1.6': '@radix-ui/react-menubar',
-        '@radix-ui/react-label@2.1.2': '@radix-ui/react-label',
-        '@radix-ui/react-hover-card@1.1.6': '@radix-ui/react-hover-card',
-        '@radix-ui/react-dropdown-menu@2.1.6': '@radix-ui/react-dropdown-menu',
-        '@radix-ui/react-dialog@1.1.6': '@radix-ui/react-dialog',
-        '@radix-ui/react-context-menu@2.2.6': '@radix-ui/react-context-menu',
-        '@radix-ui/react-collapsible@1.1.3': '@radix-ui/react-collapsible',
-        '@radix-ui/react-checkbox@1.1.4': '@radix-ui/react-checkbox',
-        '@radix-ui/react-avatar@1.1.3': '@radix-ui/react-avatar',
-        '@radix-ui/react-aspect-ratio@1.1.2': '@radix-ui/react-aspect-ratio',
-        '@radix-ui/react-alert-dialog@1.1.6': '@radix-ui/react-alert-dialog',
-        '@radix-ui/react-accordion@1.2.3': '@radix-ui/react-accordion',
-        '@': path.resolve(__dirname, './src'),
-      },
+export default defineConfig({
+  base: './', // 👈 זה החלק הכי חשוב כדי ש-GitHub Pages ימצא את הקבצים שלך
+  plugins: [react()],
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, './src'),
     },
-    build: {
-      target: 'esnext',
-      outDir: 'build',
-    },
-    server: {
-      port: 3000,
-      open: true,
-    },
-  });
+  },
+  build: {
+    target: 'esnext',
+    outDir: 'docs', // זה כדי שהבנייה תישמר בתיקייה שה-GitHub Pages מושך ממנה
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
+});
